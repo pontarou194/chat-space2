@@ -6,7 +6,7 @@
 |name|string|null: false|
 |password|string|null: false, foreign_key: true|
 |email|string|null: false, foreign_key: true|
-|users_groups_id|integer|null: false, foreign_key: true|
+
 
 ## Association
 - has_many :messages
@@ -18,7 +18,9 @@
 ### users_groups
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
+|group_name|string|null: false|
+
+
 
 ## Association
 - belongs_to :user
@@ -52,4 +54,5 @@
 ### Association
 - has_many :users_groups
 - has_many :messages
+- has_many :users
 - has_many :users ,through: users_groups
