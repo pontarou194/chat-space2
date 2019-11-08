@@ -4,8 +4,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|password|string|null: false, foreign_key: true|
-|email|string|null: false, foreign_key: true|
+|password|string|null: false|
+|email|string|null: false|
 
 
 ## Association
@@ -34,9 +34,8 @@
 |------|----|-------|
 |text|string|
 |image|string|
-|user_id|integer|null: false, foreign_key: true|
-|created_at|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false|
+|group_id|integer|null: false|
 
 ## Association
 - belongs_to :user
@@ -49,10 +48,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|created-at|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :users_groups
 - has_many :messages
-- has_many :users
 - has_many :users ,through: users_groups
