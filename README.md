@@ -8,7 +8,7 @@
 |email|string|null: false, foreign_key: true|
 
 ## Association
-- has_many :comments
+- has_many :messages
 - belongs_to :users_groups
 
 
@@ -26,7 +26,7 @@
 
 
 
-### comments table
+### messages table
 |Column|Type|Options|
 |------|----|-------|
 |text|string|
@@ -50,4 +50,4 @@
 
 ### Association
 - has_many :users_groups
-- belongs_to :comments
+- belongs_to :messages
