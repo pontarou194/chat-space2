@@ -3,25 +3,25 @@
 ### users table
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
+|name|string|null: false|
 |password|string|null: false, foreign_key: true|
 |email|string|null: false, foreign_key: true|
 
 ## Association
 - has_many :messages
-- belongs_to :users_groups
+- has_many :users_groups
+- has_many :groups
 
 
 
 ### users_groups
 |Column|Type|Options|
 |------|----|-------|
-|users_id|integer|null: false, foreign_key: true|
-|groups_id|null: false, foreign_key: true|
+|name|string|null: false, foreign_key: true|
 
 ## Association
-- has_many :users
-- has_many :groups
+- belongs_to :user
+- belongs_to :group
 
 
 
@@ -30,14 +30,14 @@
 |Column|Type|Options|
 |------|----|-------|
 |text|string|
-|image|
+|image|string|
 |user_id|integer|null: false, foreign_key: true|
 |created_at|integer|null: false, foreign_key: true|
-|groups_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ## Association
-- has_many :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
 
 
 
@@ -45,9 +45,9 @@
 ### groups table
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
+|name|string|null: false|
 |created-at|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :users_groups
-- belongs_to :messages
+- has_many :messages
