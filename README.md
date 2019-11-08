@@ -18,8 +18,8 @@
 ### users_groups
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
-
+|user_id|integer|null: false|
+|group_id|integer|null: false|
 
 
 ## Association
