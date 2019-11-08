@@ -6,6 +6,7 @@
 |name|string|null: false|
 |password|string|null: false, foreign_key: true|
 |email|string|null: false, foreign_key: true|
+|users_groups_id|integer|null: false, foreign_key: true|
 
 ## Association
 - has_many :messages
