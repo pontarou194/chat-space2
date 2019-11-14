@@ -1,9 +1,9 @@
 .chat-main
   .main-header
-    .left-side-box
+    .main-header__left-side-box
       .group-name 公安局刑事課一係
       .member-name Member :hoge1
-    %a{href: '#', class: 'edit-btn' }
+    %a{href: '#', class: 'main-header__edit-btn' }
       EDIT
 
   .messages
@@ -15,4 +15,4 @@
         .i.far.fa-image
         %input.z#input-box__text{type: "file"}/
         
-      .submit-btn Send
+      .new-message-form__submit-btn Send

@@ -5,7 +5,7 @@
     box-sizing: border-box;
   }
   
-.main-header{
+  .main-header{
     height: 100px;
     padding: 0 40px;
     display: flex;
@@ -13,25 +13,25 @@
     border-bottom: solid 1px #eee;
     top:0;
     box-sizing: border-box;
-  }
-  
-  .left-side-box{
+    
+    &__left-side-box{
       color: black;
       font-size: 20px;
       padding: 0;
       margin-top: 35px;
     }
 
-    .group-name{
-      margin-bottom: 15px;
-    }
 
-    .member-name{
-      font-size: 12.5px;
-      color: #999999;
-    }
+      .group-name{
+        margin-bottom: 15px;
+      }
 
-  .edit-btn{
+      .member-name{
+        font-size: 12.5px;
+        color: #999999;
+      }
+
+    &__edit-btn{
     color: black;
     font-size: 20px;
     color: #38aef0;
@@ -41,6 +41,7 @@
     text-decoration:none;
     margin-top: 30px;
     padding: 0 20px;
+    }
   }
 
 .messages{
@@ -72,7 +73,7 @@
     box-sizing: border-box;
     text-decoration: none solid rgb(0, 0, 0);
     float: left;
-  }
+
 
   .input-box__text{
     height: 50px;
@@ -113,7 +114,7 @@
 
 
 
-  .submit-btn{
+  &__submit-btn{
     width: 100px;
     height: 50px;
     padding: 0 30px;
@@ -125,3 +126,4 @@
     float: right;
     line-height:50px;
     }
+  }

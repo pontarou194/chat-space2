@@ -32,12 +32,13 @@
     margin-right: auto;
     font-weight: bold;
     
-}
 
-.li.header__lists{
-  display: flex;
-  color: white;
-  margin-left: 0.3rem;
+
+  &__li.header__lists{
+    display: flex;
+    color: white;
+    margin-left: 0.3rem;
+  }
 }
 
 .side-header__box__menu {
@@ -45,13 +46,15 @@
   color: white;
 }
 
+.fa-cog{
+  margin-left: 0.3rem;
+}
+
 a{
   color: white;
 }
 
-.side-header__box__menu_new_group2{
-  margin-left: 0.3rem;
-}
+
 
 
 .groups{
@@ -61,10 +64,11 @@ a{
     color: white;
     box-sizing: border-box;
     display: block;
-}
 
-  .name{
+
+  &__name{
     height: calc(100vh - 100px);
     color: white;
     font-size: 15px;
   }
+}
