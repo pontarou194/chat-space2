@@ -14,14 +14,15 @@
   color:white;
   padding: 0 20px;
   box-sizing: border-box;
-}
 
 
-.side-header__box{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  font-weight: bold;
+
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+  }
 }
 
 .ul.side-header__box__menu{
