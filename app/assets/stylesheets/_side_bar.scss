@@ -1,0 +1,70 @@
+ /* side部分 */
+ .chat-side{
+    width: 300px;
+    float: left;
+    height: 100vh;
+}
+
+.side-header {
+  background-color: #253141;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  color:white;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+
+.side-header__box{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: bold;
+}
+
+.ul.side-header__box__menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: right;
+    margin-right: auto;
+    font-weight: bold;
+    
+}
+
+.li.header__lists{
+  display: flex;
+  color: white;
+  margin-left: 0.3rem;
+}
+
+.side-header__box__menu {
+  display: flex;
+  color: white;
+}
+
+a{
+  color: white;
+}
+
+.side-header__box__menu_new_group2{
+  margin-left: 0.3rem;
+}
+
+
+.groups{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px 20px 0;
+    color: white;
+    box-sizing: border-box;
+    display: block;
+}
+
+  .name{
+    height: calc(100vh - 100px);
+    color: white;
+    font-size: 15px;
+  }
