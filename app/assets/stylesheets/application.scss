@@ -1,0 +1,18 @@
+@import "./reset";
+@import "font-awesome-sprockets";
+@import "./font-awesome";
+@import "side_bar";
+@import "main_chat";
+@import "user";
+@import "config/colors";
+@import "modules/flash";
+//下記はカリキュラムにて追加されていたやつ@import "modules/user";は追加してくださいと記述あり
+//基本import先のファイルがないとエラーが出る
+
+//@import "config/size";
+//@import "mixins/mixin";
+//@import "mixins/vendor_prefix";
+//@import "modules/side_bar";
+
+//https://master.tech-camp.in/curriculums/2672 →application.scssにはインストールしたスタイルシートをインポートしておきましょう。
+//のuser.scssは一旦無視中

@@ -1,0 +1,16 @@
+.chat-side
+  .side-header
+    .side-header__box
+      %p{"side-header__box__user__name" => ""} 宜野座監視官
+      %ul.side-header__box__menu
+        %li
+          .side-header__box__menu_new_group
+            = link_to "#", class: "fa-pen-icon" do
+              %i.fas.fa-pen-square
+        %li
+          .side-header__box__menu_new_group2
+            = link_to "#", class: "fa-cog-icon" do
+              %i.fas.fa-cog
+  .groups
+    .groups__name
+      .groups__message

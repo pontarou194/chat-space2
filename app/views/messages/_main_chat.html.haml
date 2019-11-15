@@ -1,0 +1,17 @@
+.chat-main
+  .main-header
+    .main-header__left-side-box
+      .group-name 公安局刑事課一係
+      .member-name Member :hoge1
+    .a=link_to "EDIT", "#", class: "main-header__edit-btn"
+    
+  .messages
+  .form
+    .new-message-form
+      %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", style: "", type: "text"}/
+      .input-box__image
+      %label.image-photo{for: "input-box__text" }
+        .i.far.fa-image
+        %input.z#input-box__text{type: "file"}/
+        
+      .new-message-form__submit-btn Send
