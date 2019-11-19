@@ -1,75 +1,44 @@
- /* side部分 */
- .chat-side{
-    width: 300px;
-    float: left;
-    height: 100vh;
-}
-
-.side-header {
-  background-color: #253141;
-  width: 300px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  color:white;
-  padding: 0 20px;
+.side-bar {
   box-sizing: border-box;
-
-
-
-  &__box{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-weight: bold;
+  color: $white;
+  width: 300px;
+  .header {
+    background-color: $side_blue_dark;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 20px;
+    &__name {
+      display: inline-block;
+      font-size: $side_header_font;
+      font-weight: bold;
+    }
+    &__lists {
+      display: inline-block;
+      float: right;
+      .list {
+        display: inline-block;
+      }
+      .icon {
+        color: $white;
+        font-size: $side_header_font;
+      }
+    }
   }
-}
 
-.ul.side-header__box__menu{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    text-align: right;
-    margin-right: auto;
-    font-weight: bold;
-    
-
-
-  &__li.header__lists{
-    display: flex;
-    color: white;
-    margin-left: 0.3rem;
-  }
-}
-
-.side-header__box__menu {
-  display: flex;
-  color: white;
-}
-
-.fa-cog{
-  margin-left: 0.3rem;
-}
-
-a{
-  color: white;
-}
-
-
-
-
-.groups{
+  .groups {
+    background-color: $side_blue_light;
     height: calc(100vh - 100px);
-    background-color: #2f3e51;
-    padding: 20px 20px 0;
-    color: white;
-    box-sizing: border-box;
-    display: block;
-
-
-  &__name{
-    height: calc(100vh - 100px);
-    color: white;
-    font-size: 15px;
+    padding: 0 20px;
+    .group {
+      box-sizing: border-box;
+      padding: 20px 0 40px;
+      &__name {
+        font-size: $side_group_name;
+      }
+      &__message {
+        font-size: $side_group_message;
+        margin-top: 5px;
+      }
+    }
   }
 }
