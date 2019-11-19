@@ -6,12 +6,32 @@
     .a=link_to "EDIT", "#", class: "main-header__edit-btn"
     
   .messages
-  .form
-    .new-message-form
-      %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", style: "", type: "text"}/
-      .input-box__image
-      %label.image-photo{for: "input-box__text" }
-        .i.far.fa-image
-        %input.z#input-box__text{type: "file"}/
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('far', 'far-image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+ 
+  -# .messages
+  -#   .form
+  -#     .new-message-form
+  -#       %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", style: "", type: "text"}/
+  -#       .input-box__image
+  -#       %label.image-photo{for: "input-box__text" }
+  -#       .i.far.fa-image
+  -#       %input.z#input-box__text{type: "file"}/
         
-      .new-message-form__submit-btn Send
+  -#     .new-message-form__submit-btn Send
+
+      -# https://master.tech-camp.in/curriculums/2686
+      -#     .form
+      -# = form_for [@group, @message] do |f|
+      -#   = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      -#   .form__mask
+      -#     = f.label :image, class: 'form__mask__image' do
+      -#       = icon('fas', 'image', class: 'icon')
+      -#       = f.file_field :image, class: 'hidden'
+      -#   = f.submit 'Send', class: 'form__submit'
