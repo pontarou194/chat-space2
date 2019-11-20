@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+  before_action :set_current_user, only: [:create]
+
+  def set_current_user
+    @current_user = User.find_by(id: session[:user.id])
+  end
 
   def edit
   end

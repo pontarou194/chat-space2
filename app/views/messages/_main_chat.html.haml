@@ -1,11 +1,19 @@
 .chat-main
   .main-header
     .main-header__left-side-box
-      .group-name 公安局刑事課一係
-      .member-name Member :hoge1
-    .a=link_to "EDIT", "#", class: "main-header__edit-btn"
+      .group-name
+        = @group.name
+      .member-name
+        = @current_user = current_user.name
+
+
+    =link_to edit_group_path(@group.id) do
+      .main-header__edit-btn EDIT
     
   .messages
+    = render partial: 'message', collection: @messages
+  
+  
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
@@ -14,7 +22,7 @@
           = icon('fas', 'image', class: 'icon')
           = f.file_field :image, class: 'hidden'
       = f.submit 'Send', class: 'form__submit'
- 
+
   -# .messages
   -#   .form
   -#     .new-message-form

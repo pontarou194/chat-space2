@@ -13,6 +13,7 @@ module ChatSpace2
       g.stylesheets false
       g.javascripts false
       g.helper false
+      config.time_zone = 'Tokyo'
       g.test_framework false
     end
   end
