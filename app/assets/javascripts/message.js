@@ -1,7 +1,6 @@
 $(function(){
   function buildPost(message){
-
-    // var imagefile = message.image.url? `<img src="${message.image.url}", class = 'lower-message__image'>` : "";
+    
     var image = message.image? `<img src="${message.image}", class = 'lower-message__image'>` : "";
 
     var html = `<div class="message-content">
