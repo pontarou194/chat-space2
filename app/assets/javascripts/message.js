@@ -37,21 +37,15 @@ $(function(){
       contentType: false
     })
     .done(function(message){
-    console.log(message)
       var html = buildPost(message);
-      $('.messages').append(html)
-      $('.form__message').val('')
+      $('.messages').append(html);
       $('.form__submit').prop('disabled', false);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
-      // $(messages).scrollTop($(messages).height());
-    })
-    .fail(function(){
+      $('#new_message')[0].reset();
+    });
+
+    fail(function(){
       alert('エラー');
     })
   })
 });
-
-//参考用
-// $('#form').get(0).reset();
-    // $('messages').animate({'scrollbottom' : 'margin:0px'});
-    // $('messages').animate({scrollTop: $(messages).height()},1500);
