@@ -42,7 +42,8 @@ $(function() {
       $('#new_message')[0].reset();
     })
     .fail(function() {
-      console.log('error');
+      alert('error');
+      $('.form__submit').prop('disabled', false);
     });
   });
 
@@ -67,7 +68,7 @@ $(function() {
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     })
     .fail(function() {
-      console.log('error');
+      alert("メッセージ送信に失敗しました");
     });
   };
 }

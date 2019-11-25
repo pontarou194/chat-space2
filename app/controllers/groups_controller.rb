@@ -15,6 +15,7 @@ class GroupsController < ApplicationController
       else
         render :edit
       end
+    end
 
     def create
       @group = Group.new(group_params)
@@ -24,7 +25,6 @@ class GroupsController < ApplicationController
         render :new
       end
     end
-  end
 
   private
   def group_params
