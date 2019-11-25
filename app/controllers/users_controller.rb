@@ -1,6 +1,15 @@
 class UsersController < ApplicationController
   before_action :set_current_user, only: [:create]
 
+  def index
+    return nil if params[:keyword] == ""
+    @users = User.where(['name LIKE ?', "%#{params[:keyword]}%"] ).where.not(id: current_user.id).limit(10)
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   def set_current_user
     @current_user = User.find_by(id: session[:user.id])
   end
